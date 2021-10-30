@@ -16,5 +16,5 @@ export class HeaderComponent implements OnInit {
     console.log(<HTMLInputElement>event.target.value);
   }
 
-
+  
 }
