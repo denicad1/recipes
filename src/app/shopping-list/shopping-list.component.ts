@@ -8,11 +8,13 @@ import { ingredient } from './ingredient.model';
 })
 export class ShoppingListComponent implements OnInit {
   ingredients:ingredient[]=[
-    new ingredient('marinara','10'),new ingredient('bread','2')
+    new ingredient('marinara',10),new ingredient('bread',2)
   ];
 
   constructor() { }
-
+  onListAdd(ingData:{ingName:string,ingAmount:number}){
+    this.ingredients.push(new ingredient(ingData.ingName,ingData.ingAmount));
+  }
   ngOnInit(): void {
   }
 

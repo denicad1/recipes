@@ -7,7 +7,7 @@ import { stringify } from 'querystring';
   styleUrls: ['./shopping-item.component.scss']
 })
 export class ShoppingItemComponent implements OnInit {
- @Input('srvElement') element: {name:string,amount:string};
+ @Input('srvElement') element: {name:string,amount:number};
 
   constructor() {
    }
