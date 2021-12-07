@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() feature=new EventEmitter<string>();
   foodInput='';
   foodItems=[];
   constructor() { }
@@ -15,6 +16,11 @@ export class HeaderComponent implements OnInit {
   display(event:any){
     console.log(<HTMLInputElement>event.target.value);
   }
+  onNavigate(choice:string){
+    this.feature.emit(choice);
+  }
+
+
 
   
 }
