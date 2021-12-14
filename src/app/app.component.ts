@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { recipe } from './recipes/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,9 @@ import { Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  receivedFeature;
+  receivedFeature:string;
   title = 'shopping';
+  selection;
 
   onNavReceive(received:string){
     this.receivedFeature=received;

@@ -2,6 +2,17 @@
   <div class="row">
     <!-- (click)="newRecipe()" -->
     <button class="btn btn-success">New Recipe</button>
-      <app-recipe-item *ngFor="let recipeEl of recipes" [recipeItem]='recipeEl'></app-recipe-item>
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes"
+      [recipeItem]="recipeEl"
+      (onSelected)="onRecipeSelect(recipeEl)"
+    ></app-recipe-item>
+    <app-recipe-detail
+      [details]="recDetails"
+      *ngIf="recDetails; else info"
+    ></app-recipe-detail>
+    <ng-template #info>
+      <p>please select recipe</p>
+    </ng-template>
   </div>
 </div>

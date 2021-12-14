@@ -1,4 +1,7 @@
 <app-header (feature)="onNavReceive($event)"></app-header>
-<app-recipe-list *ngIf="receivedFeature==='recipe'"></app-recipe-list>
+<app-recipe-list
+  *ngIf="receivedFeature === 'recipe'"
+  (onRecipeSelect)="selection = $event"
+></app-recipe-list>
 <hr />
-<app-shopping-list *ngIf="receivedFeature!=='recipe'"></app-shopping-list>
+<app-shopping-list *ngIf="receivedFeature !== 'recipe'"></app-shopping-list>
