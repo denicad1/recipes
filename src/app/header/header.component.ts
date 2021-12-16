@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
     console.log(<HTMLInputElement>event.target.value);
   }
   onNavigate(choice:string){
+    
     this.feature.emit(choice);
   }
 

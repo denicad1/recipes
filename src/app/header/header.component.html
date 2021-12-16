@@ -1,5 +1,4 @@
 <p>what would you like to eat?</p>
-<input type="text" (input)='display($event)'[(ngModel)]="foodInput">
-<a href="#" class="btn" (click)="onNavigate('shopping-list')">shopping list</a><a href="#" class="btn" (click)="onNavigate('recipe')">recipe</a>
-
-
+<input type="text" (input)="display($event)" [(ngModel)]="foodInput" />
+<a href="#" class="btn" (click)="onNavigate('shopping-list')">shopping list</a
+><a href="#" class="btn" (click)="onNavigate('recipe')">recipe</a>

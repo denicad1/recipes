@@ -22,7 +22,7 @@ export class RecipeListComponent implements OnInit {
 
 
   onRecipeSelect(recipe:recipe){
-    console.log("test");
+   
     this.recipeSelected.emit(recipe);
     this.recDetails=recipe;
 
