@@ -1,9 +1,48 @@
 <div class="container">
   <div class="row">
-    <!-- (click)="newRecipe()" -->
-    <button class="btn btn-success">New Recipe</button>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Name</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="name"
+        aria-label="name"
+        aria-describedby="basic-addon1"
+        #name
+      />
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2">Description</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="description"
+        aria-label="description"
+        aria-describedby="basic-addon2"
+        #description
+      />
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Image Path</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="img"
+        aria-label="img"
+        aria-describedby="basic-addon3"
+        #img
+      />
+    </div>
+    <button
+      class="btn btn-success"
+      (click)="newRecipe(name.value, description.value, img.value)"
+    >
+      New Recipe
+    </button>
     <app-recipe-item
-      *ngFor="let recipeEl of recipes"
+      *ngFor="let recipeEl of recipes; let i = index"
       [recipeItem]="recipeEl"
       (onSelected)="onRecipeSelect(recipeEl)"
     ></app-recipe-item>
