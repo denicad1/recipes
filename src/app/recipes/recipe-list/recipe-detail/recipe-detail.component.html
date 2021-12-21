@@ -10,6 +10,8 @@
   </ul>
 </div>
 <p>{{ details.description }}</p>
-<p>Ingredients</p>
+<p *ngFor="let ingredient of details.ingredients" #ingred>
+  {{ ingredient.name }}{{ ingredient.amount }}
+</p>
 
 <img src="{{ details.imagePath }}" alt="" />

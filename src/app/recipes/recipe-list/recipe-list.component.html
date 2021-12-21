@@ -35,16 +35,13 @@
         #img
       />
     </div>
-    <button
-      class="btn btn-success"
-      (click)="newRecipe(name.value, description.value, img.value)"
-    >
+    <button class="btn btn-success">
       New Recipe
+      <!-- (click)="newRecipe(name.value, description.value, img.value)" -->
     </button>
     <app-recipe-item
       *ngFor="let recipeEl of recipes; let i = index"
       [recipeItem]="recipeEl"
-      
     ></app-recipe-item>
     <app-recipe-detail
       [details]="recDetails"
