@@ -21,4 +21,15 @@ ingredientsChanged=new EventEmitter<ingredient[]>();
     this.ingredients.push(ing);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
+  addIngToList(ings:ingredient[]){
+    // for (let index = 0; index < ings.length; index++) {
+    //   const element = ings[index];
+    //   this.setIngredients(element);
+      
+    // }
+    ings.forEach((ing:ingredient)=>{
+      this.setIngredients(ing);
+    })
+    
+  }
 }
