@@ -1,5 +1,16 @@
 <p>what would you like to eat?</p>
 <input type="text" (input)="display($event)" [(ngModel)]="foodInput" />
-<a href="#" class="btn" [routerLink]="['/shoppingList']">shopping list</a
-><a href="#" class="btn" [routerLink]="['/recipeList']">recipe</a>
+<a
+  href="#"
+  class="btn"
+  routerLinkActive="active"
+  [routerLink]="['/shoppingList']"
+  >shopping list</a
+><a
+  href="#"
+  class="btn"
+  routerLinkActive="active"
+  [routerLink]="['/recipeList']"
+  >recipe</a
+>
 <!-- <router-outlet></router-outlet> -->

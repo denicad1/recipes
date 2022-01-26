@@ -34,7 +34,6 @@ import { DropdownDirectiveDirective } from './dropdown-directive.directive';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
