@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container col-md-5">
   <div class="row">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -39,10 +39,13 @@
       New Recipe
       <!-- (click)="newRecipe(name.value, description.value, img.value)" -->
     </button>
-    <app-recipe-item
-      *ngFor="let recipeEl of recipes; let i = index"
-      [recipeItem]="recipeEl"
-    ></app-recipe-item>
+    <div class="row">
+      <app-recipe-item
+        *ngFor="let recipeEl of recipes; let i = index"
+        [recipeItem]="recipeEl"
+        class="col-xs-12"
+      ></app-recipe-item>
+    </div>
     <app-recipe-detail
       [details]="recDetails"
       *ngIf="recDetails; else info"
