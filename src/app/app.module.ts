@@ -14,6 +14,8 @@ import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-it
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirectiveDirective } from './dropdown-directive.directive';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { DropdownDirectiveDirective } from './dropdown-directive.directive';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
