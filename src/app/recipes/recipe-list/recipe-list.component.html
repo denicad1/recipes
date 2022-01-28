@@ -44,12 +44,11 @@
         *ngFor="let recipeEl of recipes; let i = index"
         [recipeItem]="recipeEl"
         class="col-xs-12"
+        [routerLink]="['/recipeList', i]"
       ></app-recipe-item>
+      <router-outlet></router-outlet>
     </div>
-    <app-recipe-detail
-      [details]="recDetails"
-      *ngIf="recDetails; else info"
-    ></app-recipe-detail>
+    <!-- <app-recipe-detail *ngIf="recDetails; else info"></app-recipe-detail> -->
     <ng-template #info>
       <p>please select recipe</p>
     </ng-template>
