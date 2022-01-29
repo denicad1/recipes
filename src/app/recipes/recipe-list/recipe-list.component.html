@@ -44,7 +44,7 @@
         *ngFor="let recipeEl of recipes; let i = index"
         [recipeItem]="recipeEl"
         class="col-xs-12"
-        [routerLink]="['/recipeList', i]"
+        [routerLink]="[i]"
       ></app-recipe-item>
       <router-outlet></router-outlet>
     </div>

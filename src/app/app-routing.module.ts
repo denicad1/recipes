@@ -7,9 +7,10 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 const routes: Routes = [{
 path:'shoppingList', component: ShoppingListComponent 
 },{
-  path:'recipeList', component: RecipeListComponent
-},
-{path:'recipeList/:id',component: RecipeDetailComponent} 
+  path:'recipeList', component: RecipeListComponent, children:[
+    {path: ':id', component:RecipeDetailComponent}
+  ]
+}
 ];
 
 @NgModule({

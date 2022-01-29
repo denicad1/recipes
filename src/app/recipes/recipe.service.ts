@@ -18,7 +18,7 @@ export class RecipeService {
   getRecipes(){
     return this.recipes.slice();
   }
-  getRecipe(id:number){
+  getRecipe(id:number):recipe{
   return this.recipes.slice(id,id+1).pop();
 
   }

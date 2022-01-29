@@ -16,8 +16,9 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor(private shoppingListService:ShoppingListService,private activeRoute:ActivatedRoute,
     private recipeServ:RecipeService) { }
-  details:recipe=this.recipeServ.getRecipe(this.activeRoute.snapshot.params['id']);
+  details:recipe=this.recipeServ.getRecipe(this.activeRoute.snapshot.params.id);
   ngOnInit(): void {
+    
   }
   addToIngList(ing:ingredient[]){
     this.shoppingListService.addIngToList(ing);
