@@ -13,6 +13,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-item.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirectiveDirective } from './dropdown-directive.directive';
+import { AuthGuardService } from './recipes/auth-guard.service';
 
 
 
@@ -35,7 +36,7 @@ import { DropdownDirectiveDirective } from './dropdown-directive.directive';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
