@@ -14,6 +14,7 @@ import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-it
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirectiveDirective } from './dropdown-directive.directive';
 import { AuthGuardService } from './recipes/auth-guard.service';
+import { CanDeactivateGuardService } from './recipes/can-deactivate-guard.service';
 
 
 
@@ -36,7 +37,7 @@ import { AuthGuardService } from './recipes/auth-guard.service';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [AuthGuardService],
+  providers: [AuthGuardService,CanDeactivateGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

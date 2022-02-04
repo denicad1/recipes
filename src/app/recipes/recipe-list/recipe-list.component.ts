@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { canDeactivateComp } from '../can-deactivate-guard.service';
 import { recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
 
@@ -8,7 +10,7 @@ import { RecipeService } from '../recipe.service';
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.scss']
 })
-export class RecipeListComponent implements OnInit {
+export class RecipeListComponent implements OnInit, canDeactivateComp {
   recipes:recipe[]=this.RecipeService.getRecipes();
   recDetails:recipe;
   
@@ -32,7 +34,9 @@ export class RecipeListComponent implements OnInit {
   // }
   
 
-
+  canDeactivate(): boolean | Observable<boolean> | Promise<boolean>{
+    return confirm('testing canDeactivateGuard');
+  };
   
 
 }
