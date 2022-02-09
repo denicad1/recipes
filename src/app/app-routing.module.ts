@@ -4,15 +4,16 @@ import { AuthGuardService } from './recipes/auth-guard.service';
 import { CanDeactivateGuardService } from './recipes/can-deactivate-guard.service';
 import { RecipeDetailComponent } from './recipes/recipe-list/recipe-detail/recipe-detail.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { ResolveGuardService } from './recipes/resolve-guard.service';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 const routes: Routes = [{
 path:'shoppingList', component: ShoppingListComponent 
 },{
   path:'recipeList', 
-  canActivateChild:[AuthGuardService], 
+ // canActivateChild:[AuthGuardService], 
   canDeactivate:[CanDeactivateGuardService], component: RecipeListComponent, children:[
-    {path: ':id', component:RecipeDetailComponent}
+    {path: ':id', component:RecipeDetailComponent, resolve:{recipe:ResolveGuardService}}
   ]
 }
 ];

@@ -20,7 +20,7 @@ export class RecipeListComponent implements OnInit, canDeactivateComp {
 
 
   onNavigate(id:number){
-    this.router.navigate([],{relativeTo:this.activeRoute});
+    this.router.navigate([],{relativeTo:this.activeRoute, queryParamsHandling:'preserve'});
   }
   ngOnInit(): void {
     this.RecipeService.recipeSelect.subscribe(recipe=>{
