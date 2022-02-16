@@ -19,15 +19,15 @@ export class RecipeListComponent implements OnInit, canDeactivateComp {
   constructor(private RecipeService:RecipeService, private router:Router, private activeRoute:ActivatedRoute) { }
 
 
-  onNavigate(id:number){
-    this.router.navigate([],{relativeTo:this.activeRoute, queryParamsHandling:'preserve'});
-  }
+  // onNavigate(id:number){
+  //   this.router.navigate([],{relativeTo:this.activeRoute, queryParamsHandling:'preserve'});
+  // }
   ngOnInit(): void {
-    this.RecipeService.recipeSelect.subscribe(recipe=>{
-      this.recDetails=recipe;
+    // this.RecipeService.recipeSelect.subscribe(recipe=>{
+    //   this.recDetails=recipe;
 
       
-    })
+    // })
   }
   // newRecipe(name:string,description:string,img:string){
   //   this.RecipeService.newRecipe(new recipe(name,description,img));

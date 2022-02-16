@@ -17,10 +17,10 @@ export class RecipeItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onRecSelected(){
+  // onRecSelected(){
     
-   this.recipeService.recipeSelect.emit(this.recipeItem);
-  }
+  //  this.recipeService.recipeSelect.emit(this.recipeItem);
+  // }
 
 
 
