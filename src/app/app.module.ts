@@ -15,6 +15,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirectiveDirective } from './dropdown-directive.directive';
 import { AuthGuardService } from './recipes/auth-guard.service';
 import { CanDeactivateGuardService } from './recipes/can-deactivate-guard.service';
+import { RecipeEditComponent } from './recipes/recipe-list/recipe-edit/recipe-edit.component';
 
 
 
@@ -29,7 +30,8 @@ import { CanDeactivateGuardService } from './recipes/can-deactivate-guard.servic
     ShoppingListComponent,
     ShoppingItemComponent,
     ShoppingEditComponent,
-    DropdownDirectiveDirective
+    DropdownDirectiveDirective,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
