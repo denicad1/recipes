@@ -17,8 +17,9 @@ path:'shoppingList', component: ShoppingListComponent
  // canDeactivate:[CanDeactivateGuardService],
   component: RecipeListComponent, children:[
     {path:'new',component:RecipeEditComponent},
-    {path: ':id', component:RecipeDetailComponent, resolve:{recipe:ResolveGuardService}},
-    {path:':id/edit', component:RecipeEditComponent} 
+    {path:':id/edit', component:RecipeEditComponent} ,
+    {path: ':id', component:RecipeDetailComponent, resolve:{recipe:ResolveGuardService}}
+    
   ]
 }
 ];
