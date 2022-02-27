@@ -37,6 +37,9 @@ export class RecipeListComponent implements OnInit, canDeactivateComp {
   canDeactivate(): boolean | Observable<boolean> | Promise<boolean>{
     return confirm('testing canDeactivateGuard');
   };
+  onNavigate(){
+    this.router.navigate(['new'],{relativeTo:this.activeRoute});
+  }
   
 
 }

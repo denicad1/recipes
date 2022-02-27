@@ -14,7 +14,9 @@ path:'shoppingList', component: ShoppingListComponent
 },{
   path:'recipeList', 
  // canActivateChild:[AuthGuardService], 
-  canDeactivate:[CanDeactivateGuardService], component: RecipeListComponent, children:[
+ // canDeactivate:[CanDeactivateGuardService],
+  component: RecipeListComponent, children:[
+    {path:'new',component:RecipeEditComponent},
     {path: ':id', component:RecipeDetailComponent, resolve:{recipe:ResolveGuardService}},
     {path:':id/edit', component:RecipeEditComponent} 
   ]
